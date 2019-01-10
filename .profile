@@ -9,6 +9,9 @@ PKG_CONFIG_PATH=~/usr/lib/pkgconfig:~/usr/share/pkgconfig
 LANG=EN_US
 LC_CTYPE="EN_US.UTF-8"
 
+# clear logon message
+clear
+
 # resume/create screen session
 screen -ls >/dev/null && screen -d -RR
 
