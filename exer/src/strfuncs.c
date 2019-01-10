@@ -22,8 +22,8 @@ static void str_read(char *str, size_t n)
 	if (n == 1) while (getchar() != '\n');
 	else while (!str[n - 1] && str[n - 2] != '\n' && getchar() != '\n');
 
-	// entfernen des potenziellen LineFeed-Zeichens
-	// am Ende der Zeichenkette.
+	// entfernen des potenziellen LineFeed-Zeichens am Ende
+	// der Zeichenkette das von fgets übernommen wird.
 	while (*str && *str != '\n') ++str;
 	if (*str == '\n') *str = 0;
 }
