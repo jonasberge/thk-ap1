@@ -1,0 +1,17 @@
+# files and directories with content that
+# is either irrelevant or left untouched.
+
+.ssh
+.gitconfig
+
+.Xauthority
+.bash_history
+.bashrc
+.lsof_advm1
+.tcshrc
+.vim
+.viminfo
+
+usr/*
+tmp/*
+
