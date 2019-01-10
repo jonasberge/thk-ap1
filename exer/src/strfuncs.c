@@ -7,13 +7,23 @@ static void str_read(char *str, size_t n)
 {
 	if (!n) return;
 
-	str[n - 1] = '#';
+	// das letzte Zeichen muss für die nachfolgende Schleife
+	// einen Wert haben, welcher, falls nicht von fgets
+	// überschrieben, ungleich dem NULL-Zeichen ist.
+	str[n - 1] = ~0;
 	fgets(str, n, stdin);
 
-	if (n == 1)
-		while (str[0] != '\n' && getchar() != '\n');
+	// nach der Nutzung von fgets kann es passieren, dass
+	// überschüssige Zeichen im Standard-Eingabestream verbleiben,
+	// wenn der Buffer zu klein ist. Diese müssen entfernt werden
+	// um zu späterem Zeitpunkt eine korrekte Nutzereingabe zu
+	// gewährleisten. Dies ist nur der Fall, wenn das letzte Zeichen
+	// ein NULL-Zeichen ist und das vorige ein LineFeed-Zeichen ('\n').
+	if (n == 1) while (getchar() != '\n');
 	else while (!str[n - 1] && str[n - 2] != '\n' && getchar() != '\n');
 
+	// entfernen des potenziellen LineFeed-Zeichens
+	// am Ende der Zeichenkette.
 	while (*str && *str != '\n') ++str;
 	if (*str == '\n') *str = 0;
 }
