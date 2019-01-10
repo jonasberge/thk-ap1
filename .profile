@@ -10,5 +10,5 @@ LANG=EN_US
 LC_CTYPE="EN_US.UTF-8"
 
 # resume/create screen session
-screen -d -RR
+screen -ls >/dev/null && screen -d -RR
 
