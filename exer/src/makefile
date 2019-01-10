@@ -1,28 +1,21 @@
-INCDIR=../include
-OBJDIR=../obj
-BINDIR=../bin
+CPREF=exc
+CMAKF=c.mak
 
-PREF=exc
+JAVAPREF=Exercise
+JAVAMAKF=java.mak
 
-CC=gcc
-CFLAGS=-std=c99 -I$(INCDIR)
-LIBS=-lm
+all:
+	$(MAKE) -f $(CMAKF) $@
+	$(MAKE) -f $(JAVAMAKF) $@
 
-$(OBJDIR)/%.o: %.c
-	$(CC) -c -o $@ $< $(CFLAGS)
+$(CPREF)%:
+	$(MAKE) -f $(CMAKF) $@
 
-all: $(patsubst %.c,%,$(wildcard $(PREF)*.c))
-
-$(PREF)%: $(OBJDIR)/$(PREF)%.o
-	$(CC) -o $(BINDIR)/$@ $^ $(CFLAGS) $(LIBS)
-
-$(PREF)20:
-	$(MAKE) -f $(PREF)20.mak
-
-$(PREF)21:
-	$(MAKE) -f $(PREF)21.mak
+$(JAVAPREF)%:
+	$(MAKE) -f $(JAVAMAKF) $@
 
 .PHONY: clean
 clean:
-	rm -r $(BINDIR)/* $(OBJDIR)/*.o
+	$(MAKE) -f $(CMAKF) $@
+	$(MAKE) -f $(JAVAMAKF) $@
 
