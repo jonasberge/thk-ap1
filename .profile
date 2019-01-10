@@ -12,4 +12,3 @@ LC_CTYPE="EN_US.UTF-8"
 # resume/create screen session
 screen -d -RR
 
-
