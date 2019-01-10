@@ -19,6 +19,9 @@ $(PREF)%: $(OBJDIR)/$(PREF)%.o
 $(PREF)20:
 	$(MAKE) -f $(PREF)20.mak
 
+$(PREF)21:
+	$(MAKE) -f $(PREF)21.mak
+
 .PHONY: clean
 clean:
 	rm -r $(BINDIR)/* $(OBJDIR)/*.o
