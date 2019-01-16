@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Exercise31
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	public static void main(String[] args)
 	{
 		Locale.setDefault(Locale.GERMAN);
 
 		System.out.println("Programm zur Berechnung der Potenz x^y");
-		Scanner in = new Scanner(System.in);
 		
 		System.out.print("Bitte geben Sie x ein: ");
 		double x = in.nextDouble();
