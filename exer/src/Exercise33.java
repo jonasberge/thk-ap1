@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Exercise33
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	private static final char CHAR_NEEDLE = '*';
 	private static final char CHAR_TRUNK = '#';
 	private static final char CHAR_AIR = ' ';
@@ -32,7 +34,6 @@ public class Exercise33
 
 	public static void main(String[] args)
 	{
-		Scanner in = new Scanner(System.in);
 		int height;
 
 		do {
