@@ -9,6 +9,8 @@ import java.util.Scanner;
  */
 public class Exercise29
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	/**
 	 * Liest das Produktionsjahr eines Autos von der Tastatur ein.
 	 * @return das Produktionsjahr des Autos.
@@ -17,7 +19,7 @@ public class Exercise29
 	{
 		System.out.print("Bitte geben Sie das Produktionsjahr "
 			+ "(in der Form yyyy) ein: ");
-		return new Scanner(System.in).nextInt();
+		return in.nextInt();
 	}
 
 	/**
