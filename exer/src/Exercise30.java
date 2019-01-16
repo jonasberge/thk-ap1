@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Exercise30
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	public static void main(String[] args)
 	{
 		System.out.println("Programm zur Berechnung der Potenz x^y");
-		Scanner in = new Scanner(System.in);
 
 		System.out.print("Bitte geben Sie x ein: ");
 		double x = in.nextDouble();
