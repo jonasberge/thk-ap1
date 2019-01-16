@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Exercise32
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	public static int ackermann(int n, int m)
 	{
 		if (n == 0) return m + 1;
@@ -13,7 +15,6 @@ public class Exercise32
 	{
 		System.out.println("Berechnung des Ackermann-Werts "
 			+ "a(n, m) zweier ganzer Zahlen n und m.");
-		Scanner in = new Scanner(System.in);
 
 		System.out.print("Geben Sie einen Wert für n ein: ");
 		int n = in.nextInt();
