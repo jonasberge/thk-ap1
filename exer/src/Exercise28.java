@@ -3,11 +3,13 @@ import java.util.Scanner;
 
 public class Exercise28
 {
+	private static final Scanner in = new Scanner(System.in);
+
 	public static int getProductionYear()
 	{
 		System.out.print("Bitte geben Sie das Produktionsjahr "
 			+ "(in der Form yyyy) ein: ");
-		return new Scanner(System.in).nextInt();
+		return in.nextInt();
 	}
 
 	public static int calculateAge(int productionYear)
