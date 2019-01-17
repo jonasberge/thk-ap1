@@ -7,8 +7,14 @@ public class Exercise39
 
 	public static int[] read()
 	{
-		System.out.print("Wieviele Zahlen möchten sie eingeben? ");
-		int n = in.nextInt();
+		int n;
+		while (true) {
+			System.out.print("Wieviele Zahlen "
+				+ "möchten sie eingeben? ");
+			if ((n = in.nextInt()) > 0) break;
+			System.out.printf("Fehler: Größen kleiner 1 "
+				+ "sind nicht erlaubt!%n");
+		}
 
 		int[] arr = new int[n];
 		System.out.println("Bitte geben sie "
