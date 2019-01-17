@@ -5,7 +5,7 @@ unsigned int fib(unsigned int n)
 {
 	unsigned int buf[] = { 0, 1 };
 	const size_t size = sizeof(buf) / sizeof(*buf);
-	if (n < size) return buf[n];
+	if (!n) return buf[0];
 
 	for (unsigned int i = size - 1; i < n; ++i) {
 		unsigned int next = buf[0] + buf[1];
