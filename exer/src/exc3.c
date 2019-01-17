@@ -15,7 +15,7 @@ int main(void)
 	int mean_i = sum / 2;
 	
 	// "normale" Division wird dann durchgeführt,
-	// sobald einer der Operanden eine Gleikommazahl ist.
+	// sobald einer der Operanden eine Gleitkommazahl ist.
 	// Dabei kann in diesem Fall entweder die Variable
 	// in eine solche umgewandelt werden, wie in der
 	// Aufgabenstellung beschrieben, oder einfach
