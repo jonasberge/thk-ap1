@@ -7,13 +7,12 @@ unsigned int fib(unsigned int n)
 	const size_t size = sizeof(buf) / sizeof(*buf);
 	if (n < size) return buf[n];
 
-	unsigned int *const ptr = buf + size;
 	for (unsigned int i = size - 1; i < n; ++i) {
-		unsigned int next = ptr[-2] + ptr[-1];
-		ptr[-2] = ptr[-1], ptr[-1] = next;
+		unsigned int next = buf[0] + buf[1];
+		buf[0] = buf[1], buf[1] = next;
 	}
 
-	return ptr[-1];
+	return buf[1];
 }
 
 int main(void)
