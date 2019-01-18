@@ -14,10 +14,11 @@ public class Pig
 	private int saturation;
 
 	/**
-	 * Erstellt ein Schwein mit einem Namen, Gewicht und Sättigungsgrad.
+	 * Erstellt einen Bruch mit entsprechendem ZÃ¤hler und Nenner.
+	 * Erstellt ein Schwein mit einem Namen, Gewicht und SÃ¤ttigungsgrad.
 	 * @param name der Name.
 	 * @param weight das Gewicht.
-	 * @param saturation der Sättigungsgrad.
+	 * @param saturation der SÃ¤ttigungsgrad.
 	 */
 	public Pig(String name, int weight, int saturation)
 	{
@@ -47,8 +48,8 @@ public class Pig
 	}
 
 	/**
-	 * Füttert das Schwein mit einer Kartoffel, wobei die
-	 * Dicke der Kartoffel dessen Nährwert entspricht.
+	 * FÃ¼ttert das Schwein mit einer Kartoffel, wobei die
+	 * Dicke der Kartoffel dessen NÃ¤hrwert entspricht.
 	 */
 	public void feed(Potato potato)
 	{
@@ -66,13 +67,13 @@ public class Pig
 	}
 
 	/**
-	 * Das Schwein grunzt seinen Namen, Gewicht und Sättigungsgrad.
+	 * Das Schwein grunzt seinen Namen, Gewicht und SÃ¤ttigungsgrad.
 	 */
 	public void grunt()
 	{
 		System.out.printf("Hallo, ich bin %s.%n", name);
 		System.out.printf("Mein Gewicht ist: %d.%n", weight);
-		System.out.printf("Mein Sättigungsgrad ist: %d.%n", saturation);
+		System.out.printf("Mein SÃ¤ttigungsgrad ist: %d.%n", saturation);
 	}
 }
 
