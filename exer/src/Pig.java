@@ -50,6 +50,7 @@ public class Pig
 	/**
 	 * Füttert das Schwein mit einer Kartoffel, wobei die
 	 * Dicke der Kartoffel dessen Nährwert entspricht.
+	 * @param potato die zu fütternde Kartoffel.
 	 */
 	public void feed(Potato potato)
 	{
