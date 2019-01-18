@@ -6,7 +6,7 @@ PREF=Exercise
 JAVAC=javac
 JAVADOC=javadoc
 CFLAGS=-d $(BINDIR)
-DOCFLAGS=-encoding UTF-8 -charset UTF-8 -docencoding UTF-8 -author
+DOCFLAGS=-encoding UTF-8 -charset UTF-8 -docencoding UTF-8
 
 gendoc = $(JAVADOC) \
 	 -d $(DOCDIR)/$(shell echo $(basename $(1)) | tr A-Z a-z) $1 \
@@ -19,11 +19,15 @@ all: $(patsubst %.java,%,$(wildcard $(PREF)*.java))
 
 $(PREF)%: $(PREF)%.class ;
 
-#$(PREF)29: %: %.class
-#	$(call gendoc,$@.java)
+$(PREF)29: %: %.class
+	$(call gendoc,$@.java)
 
-#$(PREF)35: %: %.class
-#	$(call gendoc,Rational.java,-private)
+$(PREF)35: %: %.class
+	$(call gendoc,Rational.java,-private)
+
+$(PREF)38: %: %.class
+	$(call gendoc,Potato.java)
+	$(call gendoc,Pig.java)
 
 .PHONY: clean
 clean:
