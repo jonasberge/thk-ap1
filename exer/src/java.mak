@@ -17,13 +17,13 @@ all: $(patsubst %.java,%,$(wildcard $(PREF)*.java))
 %.class:
 	$(JAVAC) $*.java $(CFLAGS)
 
-$(PREF)%: $(PREF)%.class
+$(PREF)%: $(PREF)%.class ;
 
-$(PREF)29: %: %.class
-	$(call gendoc,$@.java)
+#$(PREF)29: %: %.class
+#	$(call gendoc,$@.java)
 
-$(PREF)35: %: %.class
-	$(call gendoc,Rational.java,-private)
+#$(PREF)35: %: %.class
+#	$(call gendoc,Rational.java,-private)
 
 .PHONY: clean
 clean:
