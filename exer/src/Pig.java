@@ -1,3 +1,6 @@
+/**
+ * Ein Schwein.
+ */
 public class Pig
 {
 	private static final int MIN_MOVE_SATURATION = 4;
@@ -10,6 +13,12 @@ public class Pig
 	private int weight;
 	private int saturation;
 
+	/**
+	 * Erstellt ein Schwein mit einem Namen, Gewicht und Sättigungsgrad.
+	 * @param name der Name.
+	 * @param weight das Gewicht.
+	 * @param saturation der Sättigungsgrad.
+	 */
 	public Pig(String name, int weight, int saturation)
 	{
 		this.name = name;
@@ -17,6 +26,11 @@ public class Pig
 		this.saturation = saturation;
 	}
 
+	/**
+	 * Das Schwein macht bewegt sich und bekommt Hunger oder
+	 * verliert an Gewicht. Falls es keine Kraft dazu hat wird
+	 * eine entsprechend Nachricht ausgegeben.
+	 */
 	public void move()
 	{
 		if (saturation >= MIN_MOVE_SATURATION) {
@@ -32,6 +46,10 @@ public class Pig
 		System.out.println("Ich bin zu schlapp!");
 	}
 
+	/**
+	 * Füttert das Schwein mit einer Kartoffel, wobei die
+	 * Dicke der Kartoffel dessen Nährwert entspricht.
+	 */
 	public void feed(Potato potato)
 	{
 		int nutritionalValue = potato.pick();
@@ -47,6 +65,9 @@ public class Pig
 		}
 	}
 
+	/**
+	 * Das Schwein grunzt seinen Namen, Gewicht und Sättigungsgrad.
+	 */
 	public void grunt()
 	{
 		System.out.printf("Hallo, ich bin %s.%n", name);
