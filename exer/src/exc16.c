@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define MIN_PRIME (2)
 #define MAX_NUM (1000)
@@ -11,7 +10,8 @@
 int main(void)
 {
 	int primes[MAX_NUM + 1];
-	memset(primes, 0, MIN_PRIME * sizeof(*primes));
+	for (int i = 0; i < MIN_PRIME; ++i)
+		primes[i] = 0;
 
 	puts("Programm Primzahlen");
 	printf("Oberes Limit (inklusive, max. %i): ", MAX_NUM);
