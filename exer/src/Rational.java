@@ -43,6 +43,7 @@ public class Rational
 	 * Berechnet den größten gemeinsamen Teiler (ggT) zweier Zahlen.
 	 * @param a die erste Zahl.
 	 * @param b die zweite Zahl.
+	 * @return ggT der beiden Zahlen.
 	 */
 	private int gcd(int a, int b)
 	{
