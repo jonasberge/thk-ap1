@@ -4,7 +4,6 @@ import java.util.Scanner;
 /**
  * Ein Programm zur Berechnung des Alters eines Autos,
  * mithilfe dessen Produktionsjahr.
- * @author Tadeg Jonas van den Berg
  * @author www.gm.fh-koeln.de/~inf1424
  */
 public class Exercise29
