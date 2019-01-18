@@ -1,6 +1,5 @@
 /**
  * Klasse zur Darstellung eines Bruchs bzw. einer rationalen Zahl.
- * @author Tadeg Jonas van den Berg
  * @author www.gm.fh-koeln.de/~inf1424
  */
 public class Rational
